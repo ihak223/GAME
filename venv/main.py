@@ -32,7 +32,13 @@ class Terminal:
                 if parsed_inp[0] == "game":
                     if parsed_inp[1] == "boot":
                         self.game = True
-                        print("opening game")
+                        print("Opening game.")
+                    elif parsed_inp[1] == "close":
+                        if self.game:
+                            self.game = False
+                            print("Closing game.")
+                        else:
+                            print("No game to close.")
             finally:
                 print("")
 
